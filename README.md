@@ -1,11 +1,7 @@
 # Molokai Color Scheme for Vim
 
-This is a fork of [tomasr/molokai](https://github.com/tomasr/molokai) with the following changes:
-
-* `LineNr` color background is matched to `Normal`
-* Revert `MatchParen` color changes for better readability ([pr](https://github.com/tomasr/molokai/pull/44))
-* `VertSplit` line is dimmed and `set fillchars+=vert:│` has been set to remove the dashed vertical split line
-
+This is a fork of [fatih/molokai](https://github.com/fatih/molokai) to better adjust the theme to fit
+what is used by [bat](https://github.com/sharkdp/bat) tool.
 
 
 ## Installation
@@ -13,7 +9,7 @@ This is a fork of [tomasr/molokai](https://github.com/tomasr/molokai) with the f
 Use a plugin manager, i.e:
 
 * [vim-plug](https://github.com/junegunn/vim-plug)
-  * `Plug 'fatih/molokai'`
+  * `Plug 'mbodock/molokai'`
 
 
 or copy the file on your .vim/colors folder.
@@ -30,6 +26,26 @@ attempts to bring the 256 color version as close as possible to the the default
 (dark) GUI version. To access, add this to your .vimrc:
 ```
 let g:rehash256 = 1
+```
+
+## Vim-go
+
+This theme was specifically adapted comparing the bat output for Go files.
+
+To better fit this output you should also configure your vim-go to highlight
+more items like functions, methods, operators, etc.
+
+The best settings so far for this is:
+
+```vim
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_function_calls = 0
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_types = 1
 ```
 
 ## Original Description
